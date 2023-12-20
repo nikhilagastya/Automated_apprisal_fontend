@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+            <h1>Academic Work - Teaching Performance indicator for AY 2021-22 (Max. Score: 40)</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Course/Semester</th>
+                        <th>Course taught</th>
+                        <th>No. of classes engaged per week</th>
+                        <th>Result (Pass Percentage)</th>
+                        <th>API Score for Results (Max. 20)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1st Semester</td>
+                        <td><input type="text" name="course1" required></td>
+                        <td><input type="number" name="classesPerWeek1" required></td>
+                        <td><input type="number" name="passPercentage1" required></td>
+                        <td><input type="number" name="apiScoreResults1" required></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                    <tr>
+                        <td>2</td>
+                        <td>2nd Semester</td>
+                        <td><input type="text" name="course2" required></td>
+                        <td><input type="number" name="classesPerWeek2" required></td>
+                        <td><input type="number" name="passPercentage2" required></td>
+                        <td><input type="number" name="apiScoreResults2" required></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+            
+
+          
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+            <div>
+                <label>i. Are you possessing Ph. D.? </label>
+                <select name="phdPossession" required>
+                <option value="select">SELECT</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+                <!-- Add fields for Ph.D. details -->
+            </div>
+            <div>
+                <label>ii. Are you registered for Ph. D.? </label>
+                <select name="phdRegistered" required>
+                <option value="select">SELECT</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+                <!-- Add fields for Ph.D. registration details -->
+            </div>
+
+            <!-- Add tables and fields for Research and Development details -->
+            <!-- You can use the same structure as in the Teaching Performance section -->
+            <!-- Add inputs, labels, and tables for each sub-section (a, b, c, d) as described in your request -->
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+            <!-- ... (Teaching Performance Indicators) ... -->
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <h2>Ph.D. Registration Details</h2>
+                <div>
+                    <label>Name of the University:</label>
+                    <input type="text" name="universityName" required>
+                </div>
+                <div>
+                    <label>Date of Registration:</label>
+                    <input type="date" name="registrationDate" required>
+                </div>
+                <div>
+                    <label>Supervisor’s Name:</label>
+                    <input type="text" name="supervisorName" required>
+                </div>
+                <div>
+                    <label>Co-Supervisor’s Name (if applicable):</label>
+                    <input type="text" name="coSupervisorName">
+                </div>
+                <div>
+                    <label>Pre-Ph.D completed ?</label>
+                    <select name="prePhdCompleted" required>
+                      <option value="select">SELECT</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+        </select>
+                    <!-- Show Date of completion field if pre-Ph.D. is completed -->
+                    <label>Date of completion:</label>
+                    
+                    <input type="date" name="dateOfCompletion">
+                </div>
+                <div>
+                    <label>Expected completion date:</label>
+                    <input type="date" name="expectedCompletionDate" required>
+                </div>
+                <div>
+                    <label>*Attach the document of the latest completed status:</label>
+                    <input type="file" accept="application/pdf,image/jpeg,image/png" name="documentAttachment">
+                </div>
+            </div>
+
+            <!-- Other sections for Publications, Presentations, Projects, Certifications/Awards -->
+            <!-- ... (Tables and fields for Publications, Presentations, Projects, Certifications/Awards) ... -->
+        </div>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+
+
+        <!-- Publication of Research papers / Book chapters / Books -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <!-- Ph.D. Registration fields... -->
+            </div>
+
+            <!-- Publication of Research papers / Book chapters / Books -->
+            <div class="publications">
+                <h2>Publication of Research papers / Book chapters / Books (Max. Score: 10)</h2>
+                <table id="publicationTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Title with Page No’s**</th>
+                            <th>Journal name & type (WoS, Scopus, UGC approved)</th>
+                            <th>ISSN/ISBN No.</th>
+                            <th>Year of Publication</th>
+                            <th>Impact factor</th>
+                            <th>No. of co-authors</th>
+                            <th>Whether you are the main author (Y/N)</th>
+                            <th>API Score (Max. 10)*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="sno1" required></td>
+                            <td><input type="text" name="title1" required></td>
+                            <td><input type="text" name="journalNameType1" required></td>
+                            <td><input type="text" name="issnIsbn1"></td>
+                            <td><input type="number" name="yearOfPublication1" required></td>
+                            <td><input type="number" step="0.01" name="impactFactor1" required></td>
+                            <td><input type="number" name="coAuthors1" required></td>
+                            <td>
+                                <select name="mainAuthor1" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+                            </td>
+                            <td><input type="number" name="apiScore1" max="10" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addPublicationRow()">Add Publication</button>
+                <p>*For each publication in WoS - 5 Points, Scopus- 3 Points, UGC – 1 Point, Book Chapter – 1 Point, and Book – 2 Points</p>
+                <p>**Attach the Proof of indexing in WoS / Scopus and Book Chapter.</p>
+            </div>
+
+            <!-- Other sections for Presentations, Projects, Certifications/Awards -->
+            <!-- ... (Tables and fields for Presentations, Projects, Certifications/Awards) ... -->
+        </div>
+
+        <script>
+            function addPublicationRow() {
+                const table = document.getElementById("publicationTable").getElementsByTagName('tbody')[0];
+                const rowCount = table.rows.length;
+                const newRow = table.insertRow(rowCount);
+                // Add cells with input elements for each column
+                newRow.innerHTML = `
+        <td><input type="text" name="sno${rowCount + 1}" required></td>
+        <td><input type="text" name="title${rowCount + 1}" required></td>
+        <td><input type="text" name="journalNameType${rowCount + 1}" required></td>
+        <td><input type="text" name="issnIsbn${rowCount + 1}"></td>
+        <td><input type="number" name="yearOfPublication${rowCount + 1}" required></td>
+        <td><input type="number" step="0.01" name="impactFactor${rowCount + 1}" required></td>
+        <td><input type="number" name="coAuthors${rowCount + 1}" required></td>
+        <td>
+          <select name="mainAuthor${rowCount + 1}" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </td>
+        <td><input type="number" name="apiScore${rowCount + 1}" max="10" required></td>
+      `;
+            }
+        </script>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <!-- Ph.D. Registration fields... -->
+            </div>
+
+            <!-- Publication of Research papers / Book chapters / Books -->
+            <div class="publications">
+                <!-- Publication details... -->
+            </div>
+
+            <!-- Presentation/Participation in Conference/Seminar/Workshop/Symposia/FDP -->
+            <div class="presentations">
+                <h2>Presentation/Participation in Conference/Seminar/Workshop/Symposia/FDP (Max. Score: 5)</h2>
+                <table id="presentationTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Title of the paper presented</th>
+                            <th>Name of the Conference/Seminar</th>
+                            <th>Organized by</th>
+                            <th>International/National</th>
+                            <th>No. of days</th>
+                            <th>API Score (Max. 5)*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="presentationSno1" required></td>
+                            <td><input type="text" name="presentationTitle1" required></td>
+                            <td><input type="text" name="conferenceName1" required></td>
+                            <td><input type="text" name="organizedBy1" required></td>
+                            <td>
+                                <select name="internationalOrNational1" required>
+                <option value="International">International</option>
+                <option value="National">National</option>
+              </select>
+                            </td>
+                            <td><input type="number" name="daysAttended1" required></td>
+                            <td><input type="number" name="presentationApiScore1" max="5" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addPresentationRow()">Add Presentation</button>
+                <p>*Participation & presentation – 2 Points, Participation -1 Point; FDP >= 5 Days - 3 Points</p>
+            </div>
+
+            <!-- Other sections for Projects, Certifications/Awards -->
+            <!-- ... (Tables and fields for Projects, Certifications/Awards) ... -->
+        </div>
+
+        <script>
+            function addPresentationRow() {
+                const table = document.getElementById("presentationTable").getElementsByTagName('tbody')[0];
+                const rowCount = table.rows.length;
+                const newRow = table.insertRow(rowCount);
+                // Add cells with input elements for each column
+                newRow.innerHTML = `
+        <td><input type="text" name="presentationSno${rowCount + 1}" required></td>
+        <td><input type="text" name="presentationTitle${rowCount + 1}" required></td>
+        <td><input type="text" name="conferenceName${rowCount + 1}" required></td>
+        <td><input type="text" name="organizedBy${rowCount + 1}" required></td>
+        <td>
+          <select name="internationalOrNational${rowCount + 1}" required>
+            <option value="International">International</option>
+            <option value="National">National</option>
+          </select>
+        </td>
+        <td><input type="number" name="daysAttended${rowCount + 1}" required></td>
+        <td><input type="number" name="presentationApiScore${rowCount + 1}" max="5" required></td>
+      `;
+            }
+        </script>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <!-- Ph.D. Registration fields... -->
+            </div>
+
+            <!-- Publication of Research papers / Book chapters / Books -->
+            <div class="publications">
+                <!-- Publication details... -->
+            </div>
+
+            <!-- Presentation/Participation in Conference/Seminar/Workshop/Symposia/FDP -->
+            <div class="presentations">
+                <!-- Presentation details... -->
+            </div>
+
+            <!-- Sanction of funded projects/patents, and applied Projects -->
+            <div class="projects-patents">
+                <h3>Sanction of funded projects/patents, and applied Projects (Max. Score: 5)</h3>
+                <table id="projectsTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Title of the funding proposal / Patent details</th>
+                            <th>Funding agency/Patent office details</th>
+                            <th>Status (Completed/In progress/submitted)</th>
+                            <th>API Score (Max. 5)*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="projectSno1" required></td>
+                            <td><input type="text" name="projectTitleDetails1" required></td>
+                            <td><input type="text" name="fundingAgencyDetails1" required></td>
+                            <td><input type="text" name="projectStatus1" required></td>
+                            <td><input type="number" name="projectApiScore1" max="5" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addProjectRow()">Add Project</button>
+                <p>*Approved/Sanctioned Projects – 5 Points, Projects Applied -1 Point, Patent Grant – 3 Points, Patent Publication– 2 Points</p>
+            </div>
+
+            <!-- Other sections for Certifications/Awards -->
+            <!-- ... (Tables and fields for Certifications/Awards) ... -->
+        </div>
+
+        <script>
+            function addProjectRow() {
+                const table = document.getElementById("projectsTable").getElementsByTagName('tbody')[0];
+                const rowCount = table.rows.length;
+                const newRow = table.insertRow(rowCount);
+                // Add cells with input elements for each column
+                newRow.innerHTML = `
+        <td><input type="text" name="projectSno${rowCount + 1}" required></td>
+        <td><input type="text" name="projectTitleDetails${rowCount + 1}" required></td>
+        <td><input type="text" name="fundingAgencyDetails${rowCount + 1}" required></td>
+        <td><input type="text" name="projectStatus${rowCount + 1}" required></td>
+        <td><input type="number" name="projectApiScore${rowCount + 1}" max="5" required></td>
+      `;
+            }
+        </script>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <!-- Ph.D. Registration fields... -->
+            </div>
+
+            <!-- Publication of Research papers / Book chapters / Books -->
+            <div class="publications">
+                <!-- Publication details... -->
+            </div>
+
+            <!-- Presentation/Participation in Conference/Seminar/Workshop/Symposia/FDP -->
+            <div class="presentations">
+                <!-- Presentation details... -->
+            </div>
+
+            <!-- Sanction of funded projects/patents, and applied Projects -->
+            <div class="projects-patents">
+                <!-- Project details... -->
+            </div>
+
+            <!-- Online certifications from reputed organizations and Awards received/Qualified in NET or SET -->
+            <div class="certifications-awards">
+                <h2>Online certifications from reputed organizations and Awards received/Qualified in NET or SET (Max. Score: 5)</h2>
+                <table id="certificationsTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name of the Certification / Programme</th>
+                            <th>Organization from which it is acquired</th>
+                            <th>Percentage score</th>
+                            <th>API Score (Max. 5)*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="certificationSno1" required></td>
+                            <td><input type="text" name="certificationName1" required></td>
+                            <td><input type="text" name="certificationOrganization1" required></td>
+                            <td><input type="number" step="0.01" name="certificationPercentage1" required></td>
+                            <td><input type="number" name="certificationApiScore1" max="5" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addCertificationRow()">Add Certification/Award</button>
+                <p>* Each certification - 2 Points, National Award – 2 Points, International Award – 4 Points, NET/SET – 5 Points</p>
+            </div>
+
+            <!-- ... (Any other sections if applicable) ... -->
+        </div>
+
+        <script>
+            function addCertificationRow() {
+                const table = document.getElementById("certificationsTable").getElementsByTagName('tbody')[0];
+                const rowCount = table.rows.length;
+                const newRow = table.insertRow(rowCount);
+                // Add cells with input elements for each column
+                newRow.innerHTML = `
+        <td><input type="text" name="certificationSno${rowCount + 1}" required></td>
+        <td><input type="text" name="certificationName${rowCount + 1}" required></td>
+        <td><input type="text" name="certificationOrganization${rowCount + 1}" required></td>
+        <td><input type="number" step="0.01" name="certificationPercentage${rowCount + 1}" required></td>
+        <td><input type="number" name="certificationApiScore${rowCount + 1}" max="5" required></td>
+      `;
+            }
+        </script>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <!-- ... (Previous HTML code) ... -->
+
+        <!-- Research and Development section -->
+        <div class="research-development">
+            <h1>Research and Development (Max. Score: 25)</h1>
+
+            <!-- Ph.D. Registration Details -->
+            <div class="phd-registration">
+                <!-- Ph.D. Registration fields... -->
+            </div>
+
+            <!-- Publication of Research papers / Book chapters / Books -->
+            <div class="publications">
+                <!-- Publication details... -->
+            </div>
+
+            <!-- Presentation/Participation in Conference/Seminar/Workshop/Symposia/FDP -->
+            <div class="presentations">
+                <!-- Presentation details... -->
+            </div>
+
+            <!-- Sanction of funded projects/patents, and applied Projects -->
+            <div class="projects-patents">
+                <!-- Project details... -->
+            </div>
+
+            <!-- Online certifications from reputed organizations and Awards received/Qualified in NET or SET -->
+            <div class="certifications-awards">
+                <!-- Certification/Award details... -->
+            </div>
+
+            <!-- Contribution to the Department / School / University -->
+            <div class="contribution">
+                <h2>Contribution to the Department/School/University (Max. Score: 5)</h2>
+                <table id="contributionTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name of the Activity organized</th>
+                            <th>Contribution of the Faculty Member</th>
+                            <th>API Score (Max. 5)*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="contributionSno1" required></td>
+                            <td><input type="text" name="activityName1" required></td>
+                            <td><input type="text" name="facultyContribution1" required></td>
+                            <td><input type="number" name="contributionApiScore1" max="5" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addContributionRow()">Add Contribution</button>
+                <p>*Each Activity – 2 Points</p>
+            </div>
+
+            <!-- ... (Any other sections if applicable) ... -->
+        </div>
+
+        <script>
+            function addContributionRow() {
+                const table = document.getElementById("contributionTable").getElementsByTagName('tbody')[0];
+                const rowCount = table.rows.length;
+                const newRow = table.insertRow(rowCount);
+                // Add cells with input elements for each column
+                newRow.innerHTML = `
+        <td><input type="text" name="contributionSno${rowCount + 1}" required></td>
+        <td><input type="text" name="activityName${rowCount + 1}" required></td>
+        <td><input type="text" name="facultyContribution${rowCount + 1}" required></td>
+        <td><input type="number" name="contributionApiScore${rowCount + 1}" max="5" required></td>
+      `;
+            }
+        </script>
+
+        <!-- ... (Remaining HTML code) ... -->
+        <div class="contribution">
+            <!-- Contribution details... -->
+        </div>
+
+        <!-- Examination duties assigned and performed -->
+        <div class="examination-duties">
+            <h2>Examination duties assigned and performed (Max. Score: 5)</h2>
+            <table id="examinationTable">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Type of examination duty Assigned</th>
+                        <th>Extent to which the assigned work was carried out</th>
+                        <th>API Score (Max. 5)*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="examDutySno1" required></td>
+                        <td><input type="text" name="examDutyType1" required></td>
+                        <td><input type="text" name="examDutyExtent1" required></td>
+                        <td><input type="number" name="examDutyApiScore1" max="5" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="addExamDutyRow()">Add Examination Duty</button>
+            <p>*Each Duty - 2 Points</p>
+        </div>
+
+        <!-- ... (Any other sections if applicable) ... -->
+    </div>
+
+    <script>
+        function addExamDutyRow() {
+            const table = document.getElementById("examinationTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+            // Add cells with input elements for each column
+            newRow.innerHTML = `
+              <td><input type="text" name="examDutySno${rowCount + 1}" required></td>
+              <td><input type="text" name="examDutyType${rowCount + 1}" required></td>
+              <td><input type="text" name="examDutyExtent${rowCount + 1}" required></td>
+              <td><input type="number" name="examDutyApiScore${rowCount + 1}" max="5" required></td>
+            `;
+        }
+    </script>
+    <script>
+        function addContributionRow() {
+            const table = document.getElementById("contributionTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+            // Add cells with input elements for each column
+            newRow.innerHTML = `
+              <td>${rowCount + 1}</td>
+              <td><input type="text" name="responsibilitiesAssigned${rowCount + 1}" required></td>
+              <td><input type="text" name="contributionOfFaculty${rowCount + 1}" required></td>
+              <td><input type="number" name="apiScore${rowCount + 1}" max="5" required></td>
+            `;
+        }
+    </script>
+    <script>
+        // Function to add a row for Assessment by HoD
+        function addAssessmentByHoDRow() {
+            const table = document.getElementById("assessmentByHoDTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+            // Add cells with input elements for each column
+            newRow.innerHTML = `
+              <td>${rowCount + 1}</td>
+              <td><input type="text" name="assessmentItem${rowCount + 1}" required></td>
+              <td><input type="number" name="assessmentApiScore${rowCount + 1}" max="20" required></td>
+            `;
+        }
+
+        // Function to add a row for Summary of API Scores
+        function addSummaryAPIScoresRow() {
+            const table = document.getElementById("summaryAPIScoresTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+            // Add cells with input elements for each column
+            newRow.innerHTML = `
+              <td>${rowCount + 1}</td>
+              <td><input type="text" name="criteria${rowCount + 1}" required></td>
+              <td> <!-- Maximum Score column -->
+                ${rowCount === 0 ? '40' : (rowCount === 1 ? '25' : '35')} <!-- Modify values as needed -->
+              </td>
+              <td><input type="number" name="totalAPIScore${rowCount + 1}" required></td>
+            `;
+        }
+    </script>
+    <script>
+        function addContributionNSSNCCRow() {
+            const table = document.getElementById("contributionNSSNCCTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+            // Add cells with input elements for each column
+            newRow.innerHTML = `
+              <td>${rowCount + 1}</td>
+              <td><input type="text" name="responsibilitiesAssigned${rowCount + 1}" required></td>
+              <td><input type="text" name="contributionOfFaculty${rowCount + 1}" required></td>
+              <td><input type="number" name="apiScore${rowCount + 1}" max="5" required></td>
+            `;
+        }
+    </script>
+    <div class="container">
+        <h1>V. Academic/Co-Curricular/Extra Curricular/Social Contribution/NSS/NCC (Max. Score: 5)</h1>
+        <table id="contributionNSSNCCTable" border="1">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Responsibilities assigned</th>
+                    <th>Contribution of the faculty</th>
+                    <th>API Score (Max. 5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="responsibilitiesAssigned1" required></td>
+                    <td><input type="text" name="contributionOfFaculty1" required></td>
+                    <td><input type="number" name="apiScore1" max="5" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="addRow()">Add Row</button>
+    </div>
+
+    <script>
+        function addRow() {
+            const table = document.getElementById("contributionNSSNCCTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length + 1;
+            const newRow = table.insertRow();
+
+            const cell1 = newRow.insertCell(0);
+            cell1.textContent = rowCount;
+
+            const cell2 = newRow.insertCell(1);
+            cell2.innerHTML = <input type="text" name="responsibilitiesAssigned${rowCount}" required>;
+
+            const cell3 = newRow.insertCell(2);
+            cell3.innerHTML = <input type="text" name="contributionOfFaculty${rowCount}" required>;
+
+            const cell4 = newRow.insertCell(3);
+            cell4.innerHTML = <input type="number" name="apiScore${rowCount}" max="5" required>;
+        }
+    </script>
+    <div class="container">
+        <h1>VI. Assessment of the Faculty by the Head of the Dept. (Max. Score: 20)</h1>
+        <table id="facultyAssessmentTable" border="1">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Items to be considered</th>
+                    <th>API Score (Max. 20)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="itemsConsidered1" required></td>
+                    <td><input type="number" name="apiScore1" max="20" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="addFacultyAssessmentRow()">Add Row</button>
+    </div>
+
+    <script>
+        function addFacultyAssessmentRow() {
+            const table = document.getElementById("facultyAssessmentTable").getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length + 1;
+            const newRow = table.insertRow();
+
+            const cell1 = newRow.insertCell(0);
+            cell1.textContent = rowCount;
+
+            const cell2 = newRow.insertCell(1);
+            cell2.innerHTML = <input type="text" name="itemsConsidered${rowCount}" required>;
+
+            const cell3 = newRow.insertCell(2);
+            cell3.innerHTML = <input type="number" name="apiScore${rowCount}" max="20" required>;
+        }
+    </script>
+    <div class="container">
+        <h1>VII. Summary of API Scores (to be filled by the HoD)</h1>
+        <table id="summaryAPIScoresTable" border="1">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Criteria</th>
+                    <th>Maximum Score</th>
+                    <th>Total API Score attained</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I</td>
+                    <td>Academic Work (a+b)</td>
+                    <td>40</td>
+                    <td><input type="number" name="totalAPIScore1" required></td>
+                </tr>
+                <tr>
+                    <td>II</td>
+                    <td>Research work (a+b+c+d)</td>
+                    <td>25</td>
+                    <td><input type="number" name="totalAPIScore2" required></td>
+                </tr>
+                <tr>
+                    <td>III</td>
+                    <td>Contribution to the University and co-curricular activities along with HoD assessment (III+IV+V+VI)</td>
+                    <td>35</td>
+                    <td><input type="number" name="totalAPIScore3" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>100</td>
+                    <td><input type="number" name="totalAPIScore3" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Total API score (Results + Feedback)</h2>
+            <input type="number" name="totalAPIScore" required>
+    </div>

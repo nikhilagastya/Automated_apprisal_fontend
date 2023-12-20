@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      
+      .container {
+          width: 80%;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      h1 {
+          text-align: center;
+          color: #007bff;
+      }
+      
+      .form-group {
+          margin-bottom: 15px;
+      }
+      
+      label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #555;
+      }
+      
+      input[type="text"],
+      input[type="number"],
+      input[type="date"] {
+          width: 100%;
+          padding: 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background-color: #f9f9f9;
+          color: #333;
+      }
+      
+      button {
+          padding: 10px 20px;
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      
+      button:hover {
+          background-color: #218838;
+      }
+      
+      .teaching-performance {
+          margin-top: 30px;
+          border-top: 2px solid #ccc;
+          padding-top: 20px;
+      }
+      
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+      }
+      
+      table,
+      th,
+      td {
+          border: 1px solid #ccc;
+      }
+      
+      th,
+      td {
+          padding: 8px;
+          text-align: center;
+      }
+      
+      th {
+          background-color: #f9f6f6;
+          font-weight: bold;
+      }
+  </style>
+
+
+<title>React App</title>
+</head>
+<body>
+  
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+      <script>
+       function addPublicationRow() {
+           const table = document.getElementById("publicationTable").getElementsByTagName('tbody')[0];
+           const rowCount = table.rows.length;
+           const newRow = table.insertRow(rowCount);
+           // Add cells with input elements for each column
+           newRow.innerHTML = `
+   <td><input type="text" name="sno${rowCount + 1}" required /></td>
+   <td><input type="text" name="title${rowCount + 1}" required /></td>
+   <td><input type="text" name="journalNameType${rowCount + 1}" required /></td>
+   <td><input type="text" name="issnIsbn${rowCount + 1}"></td>
+   <td><input type="number" name="yearOfPublication${rowCount + 1}" required /></td>
+   <td><input type="number" step="0.01" name="impactFactor${rowCount + 1}" required /></td>
+   <td><input type="number" name="coAuthors${rowCount + 1}" required /></td>
+   <td>
+     <select name="mainAuthor${rowCount + 1}" required />
+       <option value="Yes">Yes</option>
+       <option value="No">No</option>
+    
+   </td>
+   <td><input type="number" name="apiScore${rowCount + 1}" max="10" required /></td>
+  `;
+       }
+   
+   function addPresentationRow() {
+       const table = document.getElementById("presentationTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+  <td><input type="text" name="presentationSno${rowCount + 1}" required /></td>
+  <td><input type="text" name="presentationTitle${rowCount + 1}" required /></td>
+  <td><input type="text" name="conferenceName${rowCount + 1}" required /></td>
+  <td><input type="text" name="organizedBy${rowCount + 1}" required /></td>
+  <td>
+  <select name="internationalOrNational${rowCount + 1}" required />
+   <option value="International">International</option>
+   <option value="National">National</option>
+  
+  </td>
+  <td><input type="number" name="daysAttended${rowCount + 1}" required /></td>
+  <td><input type="number" name="presentationApiScore${rowCount + 1}" max="5" required /></td>
+  `;
+   }
+  
+   function addProjectRow() {
+       const table = document.getElementById("projectsTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+  <td><input type="text" name="projectSno${rowCount + 1}" required /></td>
+  <td><input type="text" name="projectTitleDetails${rowCount + 1}" required /></td>
+  <td><input type="text" name="fundingAgencyDetails${rowCount + 1}" required /></td>
+  <td><input type="text" name="projectStatus${rowCount + 1}" required /></td>
+  <td><input type="number" name="projectApiScore${rowCount + 1}" max="5" required /></td>
+  `;
+   }
+  
+   function addCertificationRow() {
+       const table = document.getElementById("certificationsTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+  <td><input type="text" name="certificationSno${rowCount + 1}" required /></td>
+  <td><input type="text" name="certificationName${rowCount + 1}" required /></td>
+  <td><input type="text" name="certificationOrganization${rowCount + 1}" required /></td>
+  <td><input type="number" step="0.01" name="certificationPercentage${rowCount + 1}" required /></td>
+  <td><input type="number" name="certificationApiScore${rowCount + 1}" max="5" required /></td>
+  `;
+   }
+  
+   function addContributionRow() {
+       const table = document.getElementById("contributionTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+  <td><input type="text" name="contributionSno${rowCount + 1}" required /></td>
+  <td><input type="text" name="activityName${rowCount + 1}" required /></td>
+  <td><input type="text" name="facultyContribution${rowCount + 1}" required /></td>
+  <td><input type="number" name="contributionApiScore${rowCount + 1}" max="5" required /></td>
+  `;
+   }
+  
+   function addExamDutyRow() {
+       const table = document.getElementById("examinationTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+         <td><input type="text" name="examDutySno${rowCount + 1}" required /></td>
+         <td><input type="text" name="examDutyType${rowCount + 1}" required /></td>
+         <td><input type="text" name="examDutyExtent${rowCount + 1}" required /></td>
+         <td><input type="number" name="examDutyApiScore${rowCount + 1}" max="5" required /></td>
+       `;
+   }
+  
+   function addContributionRow() {
+       const table = document.getElementById("contributionTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+         <td>${rowCount + 1}</td>
+         <td><input type="text" name="responsibilitiesAssigned${rowCount + 1}" required /></td>
+         <td><input type="text" name="contributionOfFaculty${rowCount + 1}" required /></td>
+         <td><input type="number" name="apiScore${rowCount + 1}" max="5" required /></td>
+       `;
+   }
+  
+   // Function to add a row for Assessment by HoD
+   function addAssessmentByHoDRow() {
+       const table = document.getElementById("assessmentByHoDTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+         <td>${rowCount + 1}</td>
+         <td><input type="text" name="assessmentItem${rowCount + 1}" required /></td>
+         <td><input type="number" name="assessmentApiScore${rowCount + 1}" max="20" required /></td>
+       `;
+   }
+  
+   // Function to add a row for Summary of API Scores
+   function addSummaryAPIScoresRow() {
+       const table = document.getElementById("summaryAPIScoresTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+         <td>${rowCount + 1}</td>
+         <td><input type="text" name="criteria${rowCount + 1}" required /></td>
+         <td> 
+           ${rowCount === 0 ? '40' : (rowCount === 1 ? '25' : '35')} 
+         </td>
+         <td><input type="number" name="totalAPIScore${rowCount + 1}" required /></td>
+       `;
+   }
+  
+   function addContributionNSSNCCRow() {
+       const table = document.getElementById("contributionNSSNCCTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length;
+       const newRow = table.insertRow(rowCount);
+       // Add cells with input elements for each column
+       newRow.innerHTML = `
+         <td>${rowCount + 1}</td>
+         <td><input type="text" name="responsibilitiesAssigned${rowCount + 1}" required /></td>
+         <td><input type="text" name="contributionOfFaculty${rowCount + 1}" required /></td>
+         <td><input type="number" name="apiScore${rowCount + 1}" max="5" required /></td>
+       `;
+   }
+  
+   function addRow() {
+       const table = document.getElementById("contributionNSSNCCTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length + 1;
+       const newRow = table.insertRow();
+  
+       const cell1 = newRow.insertCell(0);
+       cell1.textContent = rowCount;
+  
+       const cell2 = newRow.insertCell(1);
+       cell2.innerHTML = `<input type="text" name="responsibilitiesAssigned${rowCount}" required />`;
+  
+       const cell3 = newRow.insertCell(2);
+       cell3.innerHTML = `<input type="text" name="contributionOfFaculty${rowCount}" required />`;
+  
+       const cell4 = newRow.insertCell(3);
+       cell4.innerHTML = `<input type="number" name="apiScore${rowCount}" max="5" required />`;
+   }
+  
+   function addFacultyAssessmentRow() {
+       const table = document.getElementById("facultyAssessmentTable").getElementsByTagName('tbody')[0];
+       const rowCount = table.rows.length + 1;
+       const newRow = table.insertRow();
+  
+       const cell1 = newRow.insertCell(0);
+       cell1.textContent = rowCount;
+  
+       const cell2 = newRow.insertCell(1);
+       cell2.innerHTML = `<input type="text" name="itemsConsidered${rowCount}" required />`;
+  
+       const cell3 = newRow.insertCell(2);
+       cell3.innerHTML = `<input type="number" name="apiScore${rowCount}" max="20" required />`;
+   }
+  
+  </script>
+  </body>
+</html>
