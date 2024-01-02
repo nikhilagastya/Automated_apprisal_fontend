@@ -24,9 +24,9 @@ function App() {
     <Router>
         <div style={{backgroundColor:"white"}}>
           <Routes>
-          <Route exact path="/" element={<First/>} />
+          <Route exact path="/fi" element={<First/>} />
             <Route exact path="/home" element={<Home/>} />
-            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/" element={<Login />} />
             <Route exact path="/api_form" element={<Api_form/>} />
             <Route exact path="/approvals" element={<Approvals/>} />
             <Route exact path="/signup" element={<Signin />} />
