@@ -53,7 +53,9 @@ export default function Loginin() {
           Sign In
         </button>
         <br></br>
-      <a href='/signup'> Click here to signup</a>
+      <button onClick={()=>{
+        navigate("/signup")
+      }}> Click here to signup</button>
       </form>
     </div>
   );
