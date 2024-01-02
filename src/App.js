@@ -16,6 +16,7 @@ import Api_form from './components/Api_form';
 import Approvals from './components/Approvals';
 import Status from './components/Status';
 import Navbar_main from './components/Navbar_main'
+import First from './components/First';
 function App() {
   return (
    <>
@@ -23,6 +24,7 @@ function App() {
     <Router>
         <div style={{backgroundColor:"white"}}>
           <Routes>
+          <Route exact path="/" element={<First/>} />
             <Route exact path="/home" element={<Home/>} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/api_form" element={<Api_form/>} />
