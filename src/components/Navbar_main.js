@@ -8,7 +8,7 @@ const Navbar_main = () => {
   
   return (
 
-   info ?
+   
     <Navbar bg="white" variant="light" expand="lg">
       <img src='anurag_logo.png' style={{ width: "100px" }} alt="Logo" />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,7 +33,7 @@ const Navbar_main = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    :""
+    
   );
   
 };
