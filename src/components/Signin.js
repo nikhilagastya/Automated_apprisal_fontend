@@ -116,6 +116,7 @@ console.log("daerg",department)
           Sign Up
         </button>
         <br></br>
+        <button onClick={()=>{navigator("/login")}}>Already Registered ? Click to login</button>
         <a href='/login'>Already Registered ? Click to login</a>
       </form>
     </div>

@@ -14,19 +14,26 @@ const Navbar_main = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/home">
+       <button onClick={()=>{navigator("/home")}}> <Nav.Link style={{ color: "black", fontWeight: "bold" }} >
             Profile
           </Nav.Link>
+          </button>
+          <button onClick={()=>{navigator("/home")}}>
           <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/api_form">
             API Form
           </Nav.Link>
+          </button>
+          <button onClick={()=>{navigator("/home")}}>
           <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/status">
             Status
           </Nav.Link>
+          </button>
           {info.designation === "HOD" ? (
+             <button onClick={()=>{navigator("/home")}}>
             <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/approvals">
               Approvals
             </Nav.Link>
+            </button>
           ) : (
             ""
           )}
