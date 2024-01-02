@@ -19,7 +19,7 @@ export default function Signin() {
         return;
       }
 console.log("daerg",department)
-      const response = await fetch('http://localhost:5000/signup', {
+      const response = await fetch('https://apprisal-backend.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,9 +53,9 @@ console.log("daerg",department)
   };
 
   return (
-    <div>
+    <div style={{height:"50%" ,width:"60%"}}>
       <h2>User Sign Up</h2>
-      <form>
+      <form style={{marginLeft:"70%"}}>
         <label>First Name:</label>
         <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         <br />
@@ -115,6 +115,8 @@ console.log("daerg",department)
         <button type="button" onClick={handleSignIn}>
           Sign Up
         </button>
+        <br></br>
+        <a href='/login'>Already Registered ? Click to login</a>
       </form>
     </div>
   );

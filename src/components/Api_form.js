@@ -147,7 +147,7 @@ export default function Api_form() {
     <form id='appraisal'>
     <div className="container">
         <h1>Academic Performance Appraisal Form</h1>
-        <form id="appraisalForm">
+        {/* <form id="appraisalForm">
             <div className="form-group">
                 <label for="facultyName">Name of the faculty:</label>
                 <input type="text" id="facultyName" name="facultyName" required />
@@ -175,9 +175,9 @@ export default function Api_form() {
             <div className="form-group">
                 <label for="industryExperience">Industry Experience (Years):</label>
                 <input type="number" id="industryExperience" name="industryExperience" required />
-            </div>
+            </div> */}
            
-        </form>
+        {/* </form> */}
 
         <div className="teaching-performance">
             <h2>Academic Work - Teaching Performance indicator for AY 2021-22 (Max. Score: 40)</h2>
@@ -353,7 +353,7 @@ export default function Api_form() {
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" onClick={addPublicationRow}>Add Publication</button>
+                <button type="button" onClick={addPublicationRow}>Add Research</button>
                 <p>*For each publication in WoS - 5 Points, Scopus- 3 Points, UGC – 1 Point, Book Chapter – 1 Point, and Book – 2 Points</p>
                 <p>**Attach the Proof of indexing in WoS / Scopus and Book Chapter.</p>
             </div>
@@ -657,7 +657,7 @@ export default function Api_form() {
     </div>
 
    
-    <div className="container">
+    {/* <div className="container">
         <h2>VI. Assessment of the Faculty by the Head of the Dept. (Max. Score: 20)</h2>
         <table id="facultyAssessmentTable" border="1">
             <thead>
@@ -676,10 +676,10 @@ export default function Api_form() {
             </tbody>
         </table>
         <button onClick={addFacultyAssessmentRow}>Add Row</button>
-    </div>
+    </div> */}
 
    
-    <div className="container">
+    {/* <div className="container">
         <h2>VII. Summary of API Scores (to be filled by the HoD)</h2>
         <table id="summaryAPIScoresTable" border="1">
             <thead>
@@ -718,7 +718,7 @@ export default function Api_form() {
             </tbody>
         </table>
     </div>
-    
+     */}
     </div>
     </form>
     <button onClick={handleSubmit}>Submit</button>

@@ -14,7 +14,7 @@ const Status = () => {
 
     const handleCheckStatus = async () => {
         try {
-          const response = await fetch('http://localhost:5000/status', {
+          const response = await fetch('https://apprisal-backend.onrender.com/status', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

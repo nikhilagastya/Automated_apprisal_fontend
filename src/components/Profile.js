@@ -9,7 +9,7 @@ const Profile = () => {
 
     if (userEmail) {
       // Fetch profile details using the /get_details route as a POST request
-      fetch('http://localhost:5000/get_details', {
+      fetch('https://apprisal-backend.onrender.com/get_details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

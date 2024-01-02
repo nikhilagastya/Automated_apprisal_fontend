@@ -19,7 +19,7 @@ export default function Approvals() {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/get_pending_approvals', {
+        const response = await fetch('https://apprisal-backend.onrender.com/get_pending_approvals', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ export default function Approvals() {
   const handleApprove = async () => {
     try {
       // Send an approval request to your server
-      const response = await fetch(`http://localhost:5000/approve`, {
+      const response = await fetch(`https://apprisal-backend.onrender.com/approve`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export default function Loginin() {
 
   const handleSignIn = async () => {
     try {
-      const response = await fetch('http://localhost:5000/signin', {
+      const response = await fetch('https://apprisal-backend.onrender.com/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,8 +40,9 @@ export default function Loginin() {
 
   return (
     <div>
+      
+      <form style={{marginLeft:"40%", marginTop:"15%"}}>
       <h2>Sign In</h2>
-      <form>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <br />
@@ -51,6 +52,8 @@ export default function Loginin() {
         <button type="button" onClick={handleSignIn}>
           Sign In
         </button>
+        <br></br>
+      <a href='/signup'> Click here to signup</a>
       </form>
     </div>
   );

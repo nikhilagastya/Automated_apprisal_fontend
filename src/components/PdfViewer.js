@@ -14,7 +14,7 @@ export default function PdfViewer({ fileId, onClose, onApprove }) {
       try {
         console.log(fileId);
         const response = await fetch(
-          `http://localhost:5000/get_pdf_data/${fileId}`
+          `https://apprisal-backend.onrender.com/get_pdf_data/${fileId}`
         );
         if (response.ok) {
           const data = await response.blob();
