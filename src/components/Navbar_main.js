@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Navbar_main = () => {
   let info = localStorage.getItem("Details");
   info = JSON.parse(info);
-  const navigate = useNavigate();
+ 
   return (
 
    
@@ -15,26 +15,26 @@ const Navbar_main = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-       <button onClick={()=>{navigate("/home")}}> <Nav.Link style={{ color: "black", fontWeight: "bold" }} >
+       <Nav.Link style={{ color: "black", fontWeight: "bold" }} href='/home' >
             Profile
           </Nav.Link>
-          </button>
-          <button onClick={()=>{navigate("/home")}}>
+          
+         
           <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/api_form">
             API Form
           </Nav.Link>
-          </button>
-          <button onClick={()=>{navigate("/home")}}>
+          
+         
           <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/status">
             Status
           </Nav.Link>
-          </button>
+          
           {info.designation === "HOD" ? (
-             <button onClick={()=>{navigate("/home")}}>
+           
             <Nav.Link style={{ color: "black", fontWeight: "bold" }} href="/approvals">
               Approvals
             </Nav.Link>
-            </button>
+            
           ) : (
             ""
           )}

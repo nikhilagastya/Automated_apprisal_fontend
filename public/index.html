@@ -126,7 +126,7 @@
        <option value="No">No</option>
     
    </td>
-   <td><input type="number" name="apiScore${rowCount + 1}" max="10" required /></td>
+   <td><input type="number"  name="ResearchbookapiScore" max="10" required /></td>
   `;
        }
    
@@ -147,7 +147,7 @@
   
   </td>
   <td><input type="number" name="daysAttended${rowCount + 1}" required /></td>
-  <td><input type="number" name="presentationApiScore${rowCount + 1}" max="5" required /></td>
+  <td><input type="number" name="presentationApiScore" max="5" required /></td>
   `;
    }
   
@@ -161,7 +161,7 @@
   <td><input type="text" name="projectTitleDetails${rowCount + 1}" required /></td>
   <td><input type="text" name="fundingAgencyDetails${rowCount + 1}" required /></td>
   <td><input type="text" name="projectStatus${rowCount + 1}" required /></td>
-  <td><input type="number" name="projectApiScore${rowCount + 1}" max="5" required /></td>
+  <td><input type="number" name="projectApiScore" max="5" required /></td>
   `;
    }
   
@@ -175,7 +175,7 @@
   <td><input type="text" name="certificationName${rowCount + 1}" required /></td>
   <td><input type="text" name="certificationOrganization${rowCount + 1}" required /></td>
   <td><input type="number" step="0.01" name="certificationPercentage${rowCount + 1}" required /></td>
-  <td><input type="number" name="certificationApiScore${rowCount + 1}" max="5" required /></td>
+  <td><input type="number" name="certificationApiScore" max="5" required /></td>
   `;
    }
   
@@ -188,7 +188,7 @@
   <td><input type="text" name="contributionSno${rowCount + 1}" required /></td>
   <td><input type="text" name="activityName${rowCount + 1}" required /></td>
   <td><input type="text" name="facultyContribution${rowCount + 1}" required /></td>
-  <td><input type="number" name="contributionApiScore${rowCount + 1}" max="5" required /></td>
+  <td><input type="number" name="contributionScore" max="5" required /></td>
   `;
    }
   
@@ -201,7 +201,7 @@
          <td><input type="text" name="examDutySno${rowCount + 1}" required /></td>
          <td><input type="text" name="examDutyType${rowCount + 1}" required /></td>
          <td><input type="text" name="examDutyExtent${rowCount + 1}" required /></td>
-         <td><input type="number" name="examDutyApiScore${rowCount + 1}" max="5" required /></td>
+         <td><input type="number" name="examDutyApiScore" max="5" required /></td>
        `;
    }
   
@@ -214,7 +214,7 @@
          <td>${rowCount + 1}</td>
          <td><input type="text" name="responsibilitiesAssigned${rowCount + 1}" required /></td>
          <td><input type="text" name="contributionOfFaculty${rowCount + 1}" required /></td>
-         <td><input type="number" name="apiScore${rowCount + 1}" max="5" required /></td>
+         <td><input type="number" name="contributionScore" max="5" required /></td>
        `;
    }
   
@@ -275,7 +275,7 @@
        cell3.innerHTML = `<input type="text" name="contributionOfFaculty${rowCount}" required />`;
   
        const cell4 = newRow.insertCell(3);
-       cell4.innerHTML = `<input type="number" name="apiScore${rowCount}" max="5" required />`;
+       cell4.innerHTML = `<input type="number" name="apiScore" max="5" required />`;
    }
   
    function addFacultyAssessmentRow() {

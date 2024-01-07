@@ -14,7 +14,7 @@ export default function PdfViewer({ fileId, onClose, onApprove }) {
       try {
         console.log(fileId);
         const response = await fetch(
-          `https://apprisal-backend.onrender.com/get_pdf_data/${fileId}`
+          `http://localhost:5000/get_pdf_data/${fileId}`
         );
         if (response.ok) {
           const data = await response.blob();
@@ -43,7 +43,9 @@ export default function PdfViewer({ fileId, onClose, onApprove }) {
       </Modal.Header>
       <Modal.Body>
         {pdfData && (
-          <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${3}/build/pdf.worker.min.js`}>
+          <Worker
+            workerUrl={`https://unpkg.com/pdfjs-dist@${3}/build/pdf.worker.min.js`}
+          >
             <Viewer fileUrl={window.URL.createObjectURL(pdfData)} />
           </Worker>
         )}
